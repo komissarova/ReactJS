@@ -1,0 +1,28 @@
+.modal-style {
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    position: fixed;
+    left: 50%;
+    top:  50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    background:#94ced4;
+    padding: 10px 20px 40px;
+    border-radius: 8px;
+    flex-direction: column;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+  }
+    
+  
+  
