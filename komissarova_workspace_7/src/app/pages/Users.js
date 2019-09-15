@@ -1,24 +1,18 @@
 import React, { Component } from 'react';
 import UsersList from '../components/UsersList';
-import User from './User';
 
 import { connect } from 'react-redux';
-import { getUsers } from "../actions/usersActions";
+import { fetchUsers } from "../actions/usersActions";
 
  class Users extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      users: []
-    };
-  }  
-    
+  
   render() {
+    const { users } = this.props;
     return (
       <div>
         {
           (!this.props.children) ?
-            (<UsersList />)
+            (<UsersList users={users}/>)
             :
             (this.props.children)
         }
@@ -27,7 +21,7 @@ import { getUsers } from "../actions/usersActions";
   }
 
   componentDidMount() {
-    this.props.dispatch(getUsers());
+    this.props.dispatch(fetchUsers());
   }
 }
 
